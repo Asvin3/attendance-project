@@ -1,0 +1,29 @@
+<h2>Attendance Panel</h2>
+<a href="/logout">Logout</a>
+
+<form method="POST" action="/add">
+    <input type="text" name="name" placeholder="Student Name">
+    <input type="date" name="date">
+    <select name="status">
+        <option>Present</option>
+        <option>Absent</option>
+    </select>
+    <button type="submit">Add</button>
+</form>
+
+<table border="1">
+<tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Date</th>
+    <th>Status</th>
+</tr>
+{% for row in attendance %}
+<tr>
+    <td>{{ row.id }}</td>
+    <td>{{ row.name }}</td>
+    <td>{{ row.date }}</td>
+    <td>{{ row.status }}</td>
+</tr>
+{% endfor %}
+</table>
