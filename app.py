@@ -1,4 +1,4 @@
-[2:39 AM, 3/2/2026] Axzu: import sqlite3
+import sqlite3
 
 def init_db():
     conn = sqlite3.connect("attendance.db")
@@ -88,4 +88,5 @@ def add():
     return redirect("/")
 
 if _name_ == "_main_":
+
     app.run(debug=True)
